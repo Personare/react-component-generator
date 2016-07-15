@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "eslint-plugin-jsx-a11y": "2.0.1",
     "eslint-plugin-react": "5.2.2",
     "husky": "0.11.5",
+    "openurl": "1.1.1",
     "webpack": "1.13.1",
     "webpack-dev-server": "1.14.1"
   },
