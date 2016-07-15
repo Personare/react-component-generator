@@ -12,7 +12,6 @@ charset = utf-8
 indent_style = tab
 
 [{package.json}]
-indent_style = space
 indent_size = 2
 
 [*.md]
