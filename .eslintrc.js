@@ -4,6 +4,7 @@ module.exports = {
     "react"
   ],
   "rules": {
-    "no-console": 2
+    "no-console": 2,
+    "indent": ["error", 4]
   }
 };
