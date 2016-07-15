@@ -1,21 +1,19 @@
-'use strict';
-
 const webpack = require('webpack');
-const webpackServer = require('webpack-dev-server');
+const WebpackServer = require('webpack-dev-server');
 const webpackConfig = require('./webpack.config');
 
-const openUrl = require('openurl')
+const openUrl = require('openurl');
 
-new webpackServer(webpack(webpackConfig), {
-    publicPath: webpackConfig.output.publicPath
+new WebpackServer(webpack(webpackConfig), {
+  publicPath: webpackConfig.output.publicPath
 }).listen('8000', 'localhost', error => {
-    if (error) {
-        console.error(error);
-        process.exit(1);
-    }
+  if (error) {
+    console.error(error);
+    process.exit(1);
+  }
 
-    const url = 'http://localhost:8000';
-    
-    console.log(`Demo is ready at ${url}`);
-    openUrl.open(url);
+  const url = 'http://localhost:8000';
+
+  console.log(`Demo is ready at ${url}`);
+  openUrl.open(url);
 });
