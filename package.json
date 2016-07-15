@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Personare/react-component-boilerplate.git"
+    "url": "git+https://github.com/Personare/react-component-scaffolding.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Personare/react-component-boilerplate/issues"
+    "url": "https://github.com/Personare/react-component-scaffolding/issues"
   },
-  "homepage": "https://github.com/Personare/react-component-boilerplate#readme",
+  "homepage": "https://github.com/Personare/react-component-scaffolding#readme",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
