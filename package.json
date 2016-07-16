@@ -1,0 +1,28 @@
+{
+  "name": "slush-rcs",
+  "version": "1.0.0",
+  "description": "A slush generator for create components with React",
+  "main": "slushfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Personare/slush-rcs.git"
+  },
+  "keywords": [
+    "slushgenerator",
+    "react",
+    "component"
+  ],
+  "author": {
+    "name": "Cauê Alves",
+    "email": "cauealveseng@gmail.com",
+    "url": "http://cauealves.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Personare/slush-rcs/issues"
+  },
+  "homepage": "https://github.com/Personare/slush-rcs#readme"
+}
