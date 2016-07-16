@@ -24,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/Personare/slush-rcs/issues"
   },
-  "homepage": "https://github.com/Personare/slush-rcs#readme"
+  "homepage": "https://github.com/Personare/slush-rcs#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-conflict": "^0.4.0",
+    "gulp-install": "^0.6.0",
+    "gulp-template": "^4.0.0",
+    "inquirer": "^1.1.2"
+  }
 }
