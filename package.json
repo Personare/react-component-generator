@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "storybook": "start-storybook -p 9001"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/Personare/react-component-scaffolding#readme",
   "devDependencies": {
+    "@kadira/storybook": "^1.38.0",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-preset-airbnb": "^2.0.0",
@@ -36,9 +38,7 @@
     "jsdom": "^9.4.1",
     "mocha": "^2.5.3",
     "openurl": "^1.1.1",
-    "react-addons-test-utils": "^15.2.1",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "react-addons-test-utils": "^15.2.1"
   },
   "dependencies": {
     "react": "15.2.1",
