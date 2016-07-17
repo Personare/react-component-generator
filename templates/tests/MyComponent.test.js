@@ -2,11 +2,11 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
-import MyComponent from './../src/MyComponent';
+import <%= camelName %> from './../src/<%= camelName %>';
 
-describe('Component MyComponent', () => {
+describe('Component <%= camelName %>', () => {
     it('should have Hello message', () => {
-        const wrapper = shallow(<MyComponent />);
+        const wrapper = shallow(<<%= camelName %> />);
         expect(wrapper.text()).to.be.equal('Hello ');
     });
 })
