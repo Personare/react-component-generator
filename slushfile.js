@@ -42,7 +42,7 @@ gulp.task('default', done => {
         ];
 
         answers.name = _.humanize(answers.name);
-        answers.slugName = _.slugify(answers.name);
+        answers.slugName = 'react-' + _.slugify(answers.name);
         answers.camelName = _.camelize(answers.name);
 
         return gulp.src(files)
