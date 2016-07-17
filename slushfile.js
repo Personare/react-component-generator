@@ -1,5 +1,3 @@
-'use strict';
-
 const gulp = require('gulp');
 const install = require('gulp-install');
 const rename = require('gulp-rename');
@@ -36,7 +34,6 @@ gulp.task('default', done => {
         return gulp.src(files)
             .pipe(template(answers))
             .pipe(rename(file => {
-                console.log(file);
                 if (file.basename[0] === '_') {
                     file.basename = '.' + file.basename.slice(1);
                 } else if (file.dirname[0] === '_') {
