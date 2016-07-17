@@ -24,10 +24,17 @@ gulp.task('default', done => {
             name: 'version',
             message: 'Version',
             default: '0.1.0'
+        },
+        {
+            type: 'confirm',
+            name: 'confirm',
+            message: 'It\'s all correct?'
         }
     ]).then(answers => {
-        if (!answers.name) {
-            return done();
+        if (false === answers.confirm) {
+            console.error('Scaffolding canceled.');
+            done();
+            process.exit(1);
         }
 
         let files = [
