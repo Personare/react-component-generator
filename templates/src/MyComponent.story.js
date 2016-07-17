@@ -1,17 +1,17 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 
-import MyComponent from './MyComponent';
+import <%= camelName %> from './<%= camelName %>';
 
-storiesOf('MyComponent', module)
+storiesOf('<%= camelName %>', module)
 
 .add('Without properties', () => (
-    <MyComponent>
-    </MyComponent>
+    <<%= camelName %>>
+    </<%= camelName %>>
 ))
 
 .add('With name property', () => (
-    <MyComponent name="Cauê Alves">
-    </MyComponent>
+    <<%= camelName %> name="Cauê Alves">
+    </<%= camelName %>>
 ));
 

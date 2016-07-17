@@ -1,13 +1,13 @@
 import React from 'react';
 
-const MyComponent = React.createClass({
+class <%= camelName %> extends React.Component {
     render() {
         return (
             <div>
                 Hello {this.props.name}
             </div>
-        )
+        );
     }
-})
+}
 
-export default MyComponent;
+export default <%= camelName %>;
