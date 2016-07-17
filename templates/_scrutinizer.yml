@@ -1,6 +1,6 @@
 build:
   environment:
-    node: '6.3.0'
+    node: '6.0.0'
 
   tests:
     override:
