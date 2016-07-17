@@ -1,6 +1,6 @@
 {
-  "name": "react-component-scaffolding",
-  "version": "1.0.0",
+  "name": "<%= componentSlugName %>",
+  "version": "<%= componentVersion %>",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Personare/react-component-scaffolding.git"
+    "url": "git+https://github.com/Personare/<%= componentSlugName %>.git"
   },
-  "author": "",
+  "author": {
+    "name": "Personare",
+    "email": "devops@personare.com.br"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Personare/react-component-scaffolding/issues"
+    "url": "https://github.com/Personare/<%= componentSlugName %>/issues"
   },
-  "homepage": "https://github.com/Personare/react-component-scaffolding#readme",
+  "homepage": "https://github.com/Personare/<%= componentSlugName %>#readme",
   "devDependencies": {
     "@kadira/storybook": "^1.38.0",
     "babel-core": "^6.10.4",
