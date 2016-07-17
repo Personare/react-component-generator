@@ -1,5 +1,5 @@
 {
-  "name": "slush-rcs",
+  "name": "@Personare/slush-react-component",
   "version": "1.0.0",
   "description": "A slush generator for create a React component in isolation.",
   "main": "slushfile.js",
