@@ -1,6 +1,6 @@
 # Generator React Component
 
-> A slush generator for create a React component in isolation.
+> The idea of creating this generator components was based on the design structure them in isolation. Where we believe the web should be built this way. It is customized based on some current needs and preferences of Personare but you can easily change. Feel free to suggest improvements =]
 
 ## Installation
 
@@ -25,3 +25,17 @@ Run the generator:
 ```bash
 slush generator-react-component
 ```
+
+## Team
+
+This generator was made with love by [contributors](https://github.com/Personare/generator-react-component/graphs/contributors).
+
+### Creator
+
+[![Profile image of Cauê Alves](https://s.gravatar.com/avatar/00ef47231ad53e5a68e4524bfdb0ecf2?s=70)](https://github.com/cauealves) |
+--- | --- | --- | --- | --- | --- | ---
+[Cauê Alves](https://github.com/cauealves) |
+
+## License
+
+MIT © [Personare](http://www.personare.com.br)
