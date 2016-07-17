@@ -1,7 +1,8 @@
 module.exports = {
     "extends": "airbnb",
     "plugins": [
-        "react"
+        "react",
+        "jsx-a11y"
     ],
     "rules": {
         "no-console": 2,
