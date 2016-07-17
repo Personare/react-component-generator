@@ -26,6 +26,17 @@ gulp.task('default', done => {
             default: '0.1.0'
         },
         {
+            type: 'list',
+            name: 'ci',
+            message: 'What Continuous Integration do you want to use?',
+            default: 'scrutinizer',
+            choices: [
+                { name: 'Scrutinizer', value: 'scrutinizer' },
+                { name: 'Travis', value: 'travis' },
+                { name: 'Circle', value: 'circle' }
+            ]
+        },
+        {
             type: 'confirm',
             name: 'confirm',
             message: 'It\'s all correct?'
@@ -40,6 +51,17 @@ gulp.task('default', done => {
         let files = [
             __dirname + '/templates/**/*'
         ];
+
+        if ('circle' === answers.ci) {
+            files.push('!' + __dirname + '/templates/_scrutinizer.yml');
+            files.push('!' + __dirname + '/templates/_travis.yml');
+        } else if ('travis' === answers.ci) {
+            files.push('!' + __dirname + '/templates/_scrutinizer.yml');
+            files.push('!' + __dirname + '/templates/circle.yml');
+        } else {
+            files.push('!' + __dirname + '/templates/_travis.yml');
+            files.push('!' + __dirname + '/templates/circle.yml');
+        }
 
         answers.name = _.humanize(answers.name);
         answers.slugName = 'react-' + _.slugify(answers.name);
