@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-class <%= camelName %> extends React.Component {
-    render() {
-        return (
-            <div>
-                Hello {this.props.name}
-            </div>
-        );
-    }
+function <%= camelName %>(props) {
+    return <div>Hello {props.name}</div>;
 }
+
+<%= camelName %>.propTypes = {
+    name: PropTypes.string
+};
 
 export default <%= camelName %>;

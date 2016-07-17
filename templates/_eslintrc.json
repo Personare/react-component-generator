@@ -1,4 +1,4 @@
-module.exports = {
+{
     "extends": "airbnb",
     "plugins": [
         "react",
@@ -6,6 +6,7 @@ module.exports = {
     ],
     "rules": {
         "no-console": 2,
+        "comma-dangle": ["error", "only-multiline"],
         "indent": ["error", 4]
     }
-};
+}
