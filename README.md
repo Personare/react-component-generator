@@ -8,6 +8,36 @@ Feel free to suggest improvements =]
 
 ## How we made
 
+To define the structure we use an internal process called **DSS** (Design Structure Sprint) that through a short sprint it allows us to stay focused and aligned with the solution. 
+
+#### Environment
+
+[React Storybook](https://github.com/kadirahq/react-storybook) - *to tell stories with different behaviors of the component and provide an example page.*
+
+#### Style Guide
+
+- [EditorConfig](http://editorconfig.org/) - *standardize some general settings among multiple editors*
+- [ESLint](http://eslint.org/) - *for reporting the patterns of code*
+  - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+  - **Plugins**
+    - [React](https://github.com/yannickcr/eslint-plugin-react)
+    - [A11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)
+    - [Import](https://github.com/benmosher/eslint-plugin-import)
+
+### Tests
+- [Mocha](https://github.com/mochajs/mocha) - *test framework*
+- [Chai](https://github.com/chaijs/chai) - *assertions*
+- [Enzyme](https://github.com/airbnb/enzyme) - *shallow component*
+- [Jsdom](https://github.com/tmpvar/jsdom) - *mock the browser*
+  
+### Compiler
+
+- [babel](https://babeljs.io/)
+  - **Plugins**
+    - [Airbnb](https://github.com/airbnb/babel-preset-airbnb)
+    - [ES2015](https://www.npmjs.com/package/babel-preset-es2015)
+    - [React](https://www.npmjs.com/package/babel-preset-react)
+
 ### The structure
 
 ```bash
