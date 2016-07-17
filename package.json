@@ -1,7 +1,7 @@
 {
   "name": "slush-rcs",
   "version": "1.0.0",
-  "description": "A slush generator for create components with React",
+  "description": "A slush generator for create a React component in isolation.",
   "main": "slushfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
