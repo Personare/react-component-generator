@@ -4,7 +4,7 @@
   "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/setup.js tests/**/*test.js",
+    "test": "mocha --require tests/mock-browser.js --compilers js:babel-core/register --recursive tests/*test.js",
     "lint": "eslint .",
     "precommit": "npm run lint",
     "storybook": "start-storybook -p 9001"
