@@ -1,7 +1,7 @@
 {
-  "name": "<%= componentSlugName %>",
-  "version": "<%= componentVersion %>",
-  "description": "",
+  "name": "<%= slugName %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Personare/<%= componentSlugName %>.git"
+    "url": "git+https://github.com/Personare/<%= slugName %>.git"
   },
   "author": {
     "name": "Personare",
@@ -19,9 +19,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Personare/<%= componentSlugName %>/issues"
+    "url": "https://github.com/Personare/<%= slugName %>/issues"
   },
-  "homepage": "https://github.com/Personare/<%= componentSlugName %>#readme",
+  "homepage": "https://github.com/Personare/<%= slugName %>#readme",
   "devDependencies": {
     "@kadira/storybook": "^1.38.0",
     "babel-core": "^6.10.4",

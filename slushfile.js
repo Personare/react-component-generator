@@ -10,17 +10,23 @@ gulp.task('default', done => {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'componentName',
-            message: 'What is the name of component?'
+            name: 'name',
+            message: 'What do you want to name your component?',
+            default: getSuggestName()
         },
         {
             type: 'input',
-            name: 'componentVersion',
-            message: 'What is the version?',
+            name: 'description',
+            message: 'Please, enter a description about that.'
+        },
+        {
+            type: 'input',
+            name: 'version',
+            message: 'Version',
             default: '0.1.0'
         }
     ]).then(answers => {
-        if (!answers.componentName) {
+        if (!answers.name) {
             return done();
         }
 
@@ -28,8 +34,8 @@ gulp.task('default', done => {
             __dirname + '/templates/**/*'
         ];
 
-        answers.componentName = _.humanize(answers.componentName);
-        answers.componentSlugName = _.slugify(answers.componentName);
+        answers.name = _.humanize(answers.name);
+        answers.slugName = _.slugify(answers.name);
 
         return gulp.src(files)
             .pipe(template(answers))
@@ -50,3 +56,7 @@ gulp.task('default', done => {
             });
     });
 });
+
+function getSuggestName () {
+    return require('path').basename(process.cwd());
+}
