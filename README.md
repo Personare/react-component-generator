@@ -15,7 +15,7 @@ Feel free to suggest improvements =]
 ├── .editorconfig
 ├── .eslintrc.json
 ├── .gitignore
-├── .scrutinizer.yml
+├── .scrutinizer.yml | .travis.yml | circle.yml
 ├── .storybook
 │   └── config.js
 ├── README.md
