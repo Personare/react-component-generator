@@ -1,5 +1,5 @@
 {
-  "name": "@Personare/slush-react-component",
+  "name": "@Personare/slush-generator-react-component",
   "version": "1.0.0",
   "description": "A slush generator for create a React component in isolation.",
   "main": "slushfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Personare/slush-rcs.git"
+    "url": "git+ssh://git@github.com/Personare/generator-react-component.git"
   },
   "keywords": [
     "slushgenerator",
@@ -22,9 +22,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Personare/slush-rcs/issues"
+    "url": "https://github.com/Personare/generator-react-component/issues"
   },
-  "homepage": "https://github.com/Personare/slush-rcs#readme",
+  "homepage": "https://github.com/Personare/generator-react-component#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-conflict": "^0.4.0",
