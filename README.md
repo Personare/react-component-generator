@@ -1,12 +1,39 @@
 # Generator React Component
 
-> The idea of creating this generator components was based on the design structure them in isolation. Where we believe the web should be built this way. It is customized based on some current needs and preferences of Personare but you can easily change. Feel free to suggest improvements =]
+> A slush generator for create a React component in isolation
+
+The idea of creating this generator components was based on the design structure them in isolation. Where **we believe** the web should be built this way. It is customized based on some current needs and preferences of Personare but you can easily change. 
+
+Feel free to suggest improvements =]
+
+## How we made
+
+### The structure
+
+```bash
+├── .babelrc
+├── .editorconfig
+├── .eslintrc.json
+├── .gitignore
+├── .scrutinizer.yml
+├── .storybook
+│   └── config.js
+├── README.md
+├── package.json
+├── src
+│   ├── MyFirstComponent.css
+│   ├── MyFirstComponent.js
+│   └── MyFirstComponent.story.js
+└── tests
+    ├── MyFirstComponent.test.js
+    └── mock-browser.js
+```
 
 ## Installation
 
-### Requirements
-1. [Node >= 6.0](https://nodejs.org/en/)
-2. [Slush](http://slushjs.github.io/#/)
+- Requirements
+  1. [Node >= 6.0](https://nodejs.org/en/)
+  2. [Slush](http://slushjs.github.io/#/)
 
 After install the requirements, run the following command:
 
