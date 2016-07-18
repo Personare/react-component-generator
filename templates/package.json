@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "precommit": "npm run lint",
     "storybook": "start-storybook -p 9001",
-    "serve": "open http://localhost:9001 && npm run storybook",
+    "serve": "npm run storybook",
     "postinstall": "npm run serve"
   },
   "repository": {
