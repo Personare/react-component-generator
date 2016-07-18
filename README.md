@@ -24,13 +24,13 @@ To define the structure we use an internal process called **DSS** (Design Struct
     - [A11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)
     - [Import](https://github.com/benmosher/eslint-plugin-import)
 
-### Tests
+#### Tests
 - [Mocha](https://github.com/mochajs/mocha) - *test framework*
 - [Chai](https://github.com/chaijs/chai) - *assertions*
 - [Enzyme](https://github.com/airbnb/enzyme) - *shallow component*
 - [Jsdom](https://github.com/tmpvar/jsdom) - *mock the browser*
   
-### Compiler
+#### Compiler
 
 - [babel](https://babeljs.io/)
   - **Plugins**
