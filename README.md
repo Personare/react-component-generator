@@ -1,4 +1,4 @@
-# Generator React Component
+# React Component Generator
 
 > A slush generator for create a React component in isolation
 
@@ -68,7 +68,7 @@ To define the structure we use an internal process called **DSS** (Design Struct
 After install the requirements, run the following command:
 
 ```bash
-[sudo] npm i -g @Personare/slush-generator-react-component
+[sudo] npm i -g @Personare/slush-react-component-generator
 ```
 
 ## Usage
@@ -80,12 +80,12 @@ mkdir my-first-component && cd my-first-component
 
 Run the generator:
 ```bash
-slush generator-react-component
+slush react-component-generator
 ```
 
 ## Team
 
-This generator was made with love by [contributors](https://github.com/Personare/generator-react-component/graphs/contributors).
+This generator was made with love by [contributors](https://github.com/Personare/react-component-generator/graphs/contributors).
 
 ### Creator
 
