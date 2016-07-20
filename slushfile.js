@@ -9,6 +9,15 @@ const _ = require('underscore.string');
 gulp.task('default', done => {
     inquirer.prompt([
         {
+            type: 'list',
+            name: 'type',
+            message: 'What is the type of component you will need?',
+            choices: [
+                { name: 'Stateful (Create a class and extends the React.Component)', value: 'stateful' },
+                { name: 'Stateless (Pure function without state, backing instances or lifecycle methods)', value: 'stateless' }
+            ]
+        },
+        {
             type: 'input',
             name: 'name',
             message: 'What do you want to name your component?',
