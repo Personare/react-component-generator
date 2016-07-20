@@ -3,6 +3,6 @@ Proposed changes:
 
 - First
 - Second
-- Three
+- Third
 
 OBS: **this is an observation**
