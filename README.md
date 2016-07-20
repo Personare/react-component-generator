@@ -93,6 +93,12 @@ This generator was made with love by [contributors](https://github.com/Personare
 --- | --- | --- | --- | --- | --- | ---
 [Cauê Alves](https://github.com/cauealves) |
 
+### Participated in sprint
+
+[![Profile image of Pedro Gustavo](https://s.gravatar.com/avatar/dae75a24d5c3a99827277cdc42390722?s=70)](https://github.com/pedrogustavo) | [![Profile image of Abilio Bittencurt](https://s.gravatar.com/avatar/9406e384856a497e7239669a2d90046f?s=70)](https://github.com/antigui22)
+--- | --- | --- | --- | --- | --- | ---
+[Pedro Gustavo](https://github.com/pedrogustavo) | [Abilio Bittencourt](https://github.com/antigui22)
+
 ## License
 
 MIT © [Personare](http://www.personare.com.br)
