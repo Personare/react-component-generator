@@ -28,6 +28,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-conflict": "^0.4.0",
+    "gulp-git": "^1.9.0",
     "gulp-install": "^0.6.0",
     "gulp-rename": "^1.2.2",
     "gulp-template": "^4.0.0",

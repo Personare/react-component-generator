@@ -4,6 +4,7 @@ const rename = require('gulp-rename');
 const template = require('gulp-template');
 const conflict = require('gulp-conflict');
 const inquirer = require('inquirer');
+const git = require('gulp-git');
 const _ = require('underscore.string');
 
 gulp.task('default', done => {
@@ -107,6 +108,9 @@ gulp.task('default', done => {
                 defaultChoice: 'd'
             }))
             .pipe(gulp.dest('./'))
+            .pipe(git.init({
+                args: '--quiet'
+            }))
             .pipe(install())
             .on('finish', function(){
                 done();
