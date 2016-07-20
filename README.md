@@ -101,4 +101,4 @@ This generator was made with love by [contributors](https://github.com/Personare
 
 ## License
 
-MIT © [Personare](http://www.personare.com.br)
+[MIT © Personare](./LICENSE)
