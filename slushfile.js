@@ -9,6 +9,15 @@ const _ = require('underscore.string');
 gulp.task('default', done => {
     inquirer.prompt([
         {
+            type: 'list',
+            name: 'type',
+            message: 'What is the type of component you will need?',
+            choices: [
+                { name: 'Stateful (Create a class and extends the React.Component)', value: 'stateful' },
+                { name: 'Stateless (Pure function without state, backing instances or lifecycle methods)', value: 'stateless' }
+            ]
+        },
+        {
             type: 'input',
             name: 'name',
             message: 'What do you want to name your component?',
@@ -63,6 +72,12 @@ gulp.task('default', done => {
             files.push('!' + __dirname + '/templates/circle.yml');
         }
 
+        if ('stateless' === answers.type) {
+            files.push('!' + __dirname + '/templates/*/{stateful,stateful/**}');
+        } else {
+            files.push('!' + __dirname + '/templates/*/{stateless,stateless/**}');
+        }
+
         answers.name = _.humanize(answers.name);
         answers.slugName = 'react-' + _.slugify(answers.name);
         answers.camelName = _.camelize(answers.name);
@@ -78,6 +93,14 @@ gulp.task('default', done => {
 
                 if (file.basename.indexOf('MyComponent') > -1) {
                     file.basename = file.basename.replace('MyComponent', answers.camelName);
+                }
+
+                if (file.dirname == 'src/stateless' || file.dirname == 'src/stateful') {
+                    file.dirname = 'src';
+                }
+
+                if (file.dirname == 'tests/stateless' || file.dirname == 'tests/stateful') {
+                    file.dirname = 'tests';
                 }
             }))
             .pipe(conflict('./', {
