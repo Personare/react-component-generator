@@ -5,7 +5,7 @@ import { describe, it, before } from 'mocha';
 
 import <%= camelName %> from './../src/<%= camelName %>';
 
-describe('<%= camelName %> default behavior tests', function <%= camelName %>Tests() {
+describe('<%= camelName %> with default behavior', function <%= camelName %>Tests() {
     this.timeout(5000);
 
     before(() => {
