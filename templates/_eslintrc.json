@@ -8,6 +8,8 @@
         "no-console": 2,
         "comma-dangle": ["error", "only-multiline"],
         "indent": ["error", 4],
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
         "prefer-arrow-callback": [
             "error", {
                 "allowNamedFunctions": true
