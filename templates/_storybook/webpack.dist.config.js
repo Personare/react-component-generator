@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/HeaderMainContent.js',
+    entry: './src/<%= camelName %>.js',
     module: {
         loaders: [
             {
@@ -24,7 +24,7 @@ module.exports = {
     },
 
     output: {
-        filename: 'dist/<%= camelName %>.js',
+        filename: 'dist/<%= name %>.js',
         libraryTarget: 'umd'
     },
 
