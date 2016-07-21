@@ -43,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^5.2.2",
     "husky": "^0.11.5",
+    "ignore-styles": "^4.0.0",
     "jsdom": "^9.4.1",
     "mocha": "^2.5.3",
     "raw-loader": "^0.5.1",
