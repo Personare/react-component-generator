@@ -75,7 +75,7 @@ To define the structure we use an internal process called **DSS** (Design Struct
 After install the requirements, run the following command:
 
 ```bash
-[sudo] npm i -g @Personare/slush-react-component-generator
+[sudo] npm i -g slush-react-component-generator
 ```
 
 ## Usage
