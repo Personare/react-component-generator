@@ -5,12 +5,14 @@
   "private": true,
   "main": "dist/<%= name %>",
   "scripts": {
-    "test": "mocha --require tests/mock-browser.js --compilers js:babel-core/register --recursive tests/*test.js",
+    "build": "npm run lint && npm run test && npm run dist && npm run ghpages",
+    "dist": "webpack -p --config .storybook/webpack.dist.config.js",
+    "ghpages": "make ghp-storybook",
     "lint": "eslint src",
+    "prepush": "npm run lint && npm run test",
     "storybook": "start-storybook -p 9001",
     "serve": "npm run storybook",
-    "ghpages": "make ghp-storybook",
-    "prepush": "npm run lint && npm run test"
+    "test": "mocha --require tests/mock-browser.js --compilers js:babel-core/register --recursive tests/*test.js"
   },
   "repository": {
     "type": "git",
