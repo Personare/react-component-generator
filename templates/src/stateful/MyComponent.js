@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './<%= camelName %>.css';
+
 class <%= camelName %> extends Component {
     constructor() {
         super();
