@@ -3,13 +3,16 @@
   "version": "<%= version %>",
   "description": "<%= description %>",
   "private": true,
-  "main": "index.js",
+  "main": "dist/<%= name %>",
   "scripts": {
-    "test": "mocha --require tests/mock-browser.js --compilers js:babel-core/register --recursive tests/*test.js",
+    "build": "npm run lint && npm run test && npm run dist && npm run ghpages",
+    "dist": "webpack -p --config .storybook/webpack.dist.config.js",
+    "ghpages": "make ghp-storybook",
     "lint": "eslint src",
+    "prepush": "npm run lint && npm run test",
     "storybook": "start-storybook -p 9001",
     "serve": "npm run storybook",
-    "prepush": "npm run lint && npm run test"
+    "test": "mocha --require tests/mock-browser.js --require ignore-styles --compilers js:babel-core/register --recursive tests/*test.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^5.2.2",
     "husky": "^0.11.5",
+    "ignore-styles": "^4.0.0",
     "jsdom": "^9.4.1",
     "mocha": "^2.5.3",
     "raw-loader": "^0.5.1",

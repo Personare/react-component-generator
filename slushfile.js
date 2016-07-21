@@ -85,6 +85,8 @@ gulp.task('default', done => {
         answers.slugName = 'react-' + _.slugify(answers.name);
         answers.camelName = _.camelize(answers.name);
 
+        git.init({ args: '--quiet' });
+
         return gulp.src(files)
             .pipe(template(answers))
             .pipe(rename(file => {
@@ -110,9 +112,6 @@ gulp.task('default', done => {
                 defaultChoice: 'd'
             }))
             .pipe(gulp.dest('./'))
-            .pipe(git.init({
-                args: '--quiet'
-            }))
             .pipe(install())
             .on('finish', function(){
                 done();
