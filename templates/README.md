@@ -9,7 +9,7 @@
 Ensure you've [Node.js](https://nodejs.org) version >= 6 installed, then run the following command:
 
 ```
-$ npm install <%= name %> --save
+$ npm install <%= slugName %> --save
 ```
 
 ## Usage
