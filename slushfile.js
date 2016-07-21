@@ -14,8 +14,8 @@ gulp.task('default', done => {
             name: 'type',
             message: 'What is the type of component you will need?',
             choices: [
-                { name: 'Stateful (Create a class and extends the React.Component)', value: 'stateful' },
-                { name: 'Stateless (Pure function without state, backing instances or lifecycle methods)', value: 'stateless' }
+                { name: 'Stateless (Pure function without state, backing instances or lifecycle methods)', value: 'stateless' },
+                { name: 'Stateful (Create a class and extends the React.Component)', value: 'stateful' }
             ]
         },
         {
@@ -59,7 +59,9 @@ gulp.task('default', done => {
         }
 
         let files = [
-            __dirname + '/templates/**/*'
+            __dirname + '/templates/**/*',
+            '!' + __dirname + '/templates/*/stateful',
+            '!' + __dirname + '/templates/*/stateless'
         ];
 
         if ('circle' === answers.ci) {
@@ -74,9 +76,9 @@ gulp.task('default', done => {
         }
 
         if ('stateless' === answers.type) {
-            files.push('!' + __dirname + '/templates/*/{stateful,stateful/**}');
+            files.push('!' + __dirname + '/templates/*/stateful/**');
         } else {
-            files.push('!' + __dirname + '/templates/*/{stateless,stateless/**}');
+            files.push('!' + __dirname + '/templates/*/stateless/**');
         }
 
         answers.name = _.humanize(answers.name);
