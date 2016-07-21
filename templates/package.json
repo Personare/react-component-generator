@@ -16,17 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Personare/<%= slugName %>.git"
+    "url": "git+https://github.com/.../<%= slugName %>.git"
   },
-  "author": {
-    "name": "Personare",
-    "email": "devops@personare.com.br"
-  },
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Personare/<%= slugName %>/issues"
+    "url": "https://github.com/.../<%= slugName %>/issues"
   },
-  "homepage": "https://github.com/Personare/<%= slugName %>#readme",
+  "homepage": "https://github.com/.../<%= slugName %>#readme",
   "devDependencies": {
     "@kadira/storybook": "^1.38.0",
     "babel-core": "^6.10.4",
