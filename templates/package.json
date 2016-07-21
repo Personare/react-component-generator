@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require tests/mock-browser.js --compilers js:babel-core/register --recursive tests/*test.js",
-    "lint": "eslint .",
+    "lint": "eslint src",
     "precommit": "npm run lint",
     "storybook": "start-storybook -p 9001",
     "serve": "npm run storybook",
