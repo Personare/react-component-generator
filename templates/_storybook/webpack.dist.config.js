@@ -24,7 +24,7 @@ module.exports = {
     },
 
     output: {
-        filename: 'dist/<%= name %>.js',
+        filename: 'dist/<%= slugName %>.js',
         libraryTarget: 'umd'
     },
 
