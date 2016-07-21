@@ -25,9 +25,9 @@ class <%= camelName %> extends Component {
 
     render() {
         return (
-          <div>
-            Hello, you are here there: <span>{this.state.count}</span> seconds
-          </div>
+            <div>
+                Hello, you are here there: <span>{this.state.count}</span> seconds
+            </div>
         );
     }
 }

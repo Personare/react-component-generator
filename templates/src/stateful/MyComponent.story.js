@@ -6,5 +6,5 @@ import <%= camelName %> from './<%= camelName %>';
 const stories = storiesOf('<%= camelName %>', module);
 
 stories.add('Without properties', () => (
-  <<%= camelName %> />
+    <<%= camelName %> />
 ));
