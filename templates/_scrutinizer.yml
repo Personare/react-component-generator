@@ -5,4 +5,4 @@ build:
   tests:
     override:
       - npm run lint
-      - npm run tests
+      - npm run test
