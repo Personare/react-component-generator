@@ -1,4 +1,4 @@
-# <%= name %>
+# <%= slugName %>
 
 > <%= description %>
 
