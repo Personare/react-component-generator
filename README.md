@@ -53,7 +53,6 @@ To define the structure we use an internal process called **DSS** (Design Struct
 │   ├── config.js
 │   ├── webpack.config.js
 │   └── webpack.dist.config.js
-├── Makefile
 ├── README.md
 ├── contributing.md
 ├── package.json
