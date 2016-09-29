@@ -1,5 +1,5 @@
 {
-  "name": "<%= slugName %>",
+  "name": "@personare/<%= slugName %>",
   "version": "<%= version %>",
   "description": "<%= description %>",
   "private": true,
@@ -15,7 +15,10 @@
     "dist": "webpack -p --config storybook/webpack.dist.config.js",
     "ghpages": "storybook-to-ghpages",
     "prepush": "npm run lint && npm run test",
-    "serve": "npm run storybook"
+    "serve": "npm run storybook",
+    "pub": "npm publish --access=public",
+    "preversion": "npm test",
+    "postversion": "npm run pub"
   },
   "repository": {
     "type": "git",
