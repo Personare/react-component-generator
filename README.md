@@ -18,24 +18,22 @@ To define the structure we use an internal process called **DSS** (Design Struct
 
 - [EditorConfig](http://editorconfig.org/) - *standardize some general settings among multiple editors*
 - [ESLint](http://eslint.org/) - *for reporting the patterns of code*
-  - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
   - **Plugins**
-    - [React](https://github.com/yannickcr/eslint-plugin-react)
-    - [A11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)
-    - [Import](https://github.com/benmosher/eslint-plugin-import)
+  - [React](https://github.com/yannickcr/eslint-plugin-react)
+  - [Snazzy](https://github.com/feross/snazzy)
+  - [Standard](https://github.com/feross/standard)
+  - [Standard Loader](https://github.com/timoxley/standard-loader)
 
 #### Tests
-- [Mocha](https://github.com/mochajs/mocha) - *test framework*
-- [Chai](https://github.com/chaijs/chai) - *assertions*
-- [Enzyme](https://github.com/airbnb/enzyme) - *shallow component*
-- [Jsdom](https://github.com/tmpvar/jsdom) - *mock the browser*
+- [Jest](https://facebook.github.io/jest/) - *test framework*
   
 #### Compiler
 
 - [babel](https://babeljs.io/)
   - **Plugins**
-    - [Airbnb](https://github.com/airbnb/babel-preset-airbnb)
     - [ES2015](https://www.npmjs.com/package/babel-preset-es2015)
+    - [stage-0](https://www.npmjs.com/package/babel-preset-stage-0)
+    - [babel-jest](https://www.npmjs.com/package/babel-jest)
     - [React](https://www.npmjs.com/package/babel-preset-react)
 
 ### The structure
