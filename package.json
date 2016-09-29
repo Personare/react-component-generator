@@ -1,12 +1,15 @@
 {
   "name": "@personare/slush-react-component-generator",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A slush generator for create a React component in isolation.",
   "main": "slushfile.js",
   "scripts": {
     "test": "npm run lint",
     "lint": "standard --verbose | snazzy",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "pub": "npm publish --access=public",
+    "preversion": "npm test",
+    "postversion": "npm run pub"
   },
   "repository": {
     "type": "git",
