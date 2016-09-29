@@ -88,14 +88,6 @@ gulp.task('default', done => {
         if (file.basename.indexOf('MyComponent') > -1) {
           file.basename = file.basename.replace('MyComponent', answers.camelName)
         }
-
-        if (file.dirname == 'src/stateless' || file.dirname == 'src/stateful') {
-          file.dirname = 'src'
-        }
-
-        if (file.dirname == 'tests/stateless' || file.dirname == 'tests/stateful') {
-          file.dirname = 'tests'
-        }
       }))
       .pipe(conflict('./', {
         defaultChoice: 'd'
