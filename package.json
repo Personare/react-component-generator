@@ -27,6 +27,11 @@
     "url": "https://github.com/Personare/react-component-generator/issues"
   },
   "homepage": "https://github.com/Personare/react-component-generator#readme",
+  "standard": {
+    "ignore": [
+      "templates"
+    ]
+  },
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-conflict": "^0.4.0",
