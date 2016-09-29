@@ -1,14 +1,14 @@
-import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import React from 'react'
+import { storiesOf } from '@kadira/storybook'
 
-import <%= camelName %> from './<%= camelName %>';
+import <%= camelName %> from './<%= camelName %>'
 
-const stories = storiesOf('<%= camelName %>', module);
+const stories = storiesOf('<%= camelName %>', module)
 
 stories.add('Without properties', () => (
-    <<%= camelName %> />
-));
+  <<%= camelName %> />
+))
 
 stories.add('With name property', () => (
-    <<%= camelName %> name="Cauê Alves" />
-));
+  <<%= camelName %> name="Cauê Alves" />
+))
