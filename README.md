@@ -93,9 +93,9 @@ This generator was made with love by [contributors](https://github.com/Personare
 
 ### Creator
 
-[![Profile image of Cauê Alves](https://s.gravatar.com/avatar/00ef47231ad53e5a68e4524bfdb0ecf2?s=70)](https://github.com/cauealves) |
+[![Profile image of Cauê Alves](https://s.gravatar.com/avatar/00ef47231ad53e5a68e4524bfdb0ecf2?s=70)](https://twitter.com/ceasbz) |
 --- | --- | --- | --- | --- | --- | ---
-[Cauê Alves](https://github.com/cauealves) |
+[Cauê Alves](https://twitter.com/ceasbz) |
 
 ### Participated in sprint
 
