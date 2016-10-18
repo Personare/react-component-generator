@@ -1,6 +1,7 @@
+'use strict';
+
 const path = require('path')
 const gulp = require('gulp')
-const install = require('gulp-install')
 const rename = require('gulp-rename')
 const template = require('gulp-template')
 const conflict = require('gulp-conflict')
@@ -93,7 +94,6 @@ gulp.task('default', done => {
         defaultChoice: 'd'
       }))
       .pipe(gulp.dest('./'))
-      .pipe(install())
       .on('finish', function () {
         done()
       })
