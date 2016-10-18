@@ -1,30 +1,32 @@
-'use strict';
+'use strict'
 
-const gulp = require('gulp');
-const chai =  require('chai');
-const mocha = require('mocha');
-const inquirer = require('inquirer');
-const mockirer = require('mockirer');
-const mockGulpDest = require('mock-gulp-dest')(gulp);
+const chai = require('chai')
+const inquirer = require('inquirer')
+const mockirer = require('mockirer')
 
-chai.should();
+const mocha = require('mocha')
+const describe = mocha.describe
+const before = mocha.before
+const beforeEach = mocha.beforeEach
 
-require('../slushfile');
+chai.should()
 
-describe('react-component-generator', function() {
-    before(function() {
-      process.chdir(__dirname);
-    });
+require('../slushfile')
 
-    describe('should work with confirm answers', function(){
-      beforeEach(() => {
-        mockirer(inquirer, {
-          name: 'unit',
-          description: 'Simple test',
-          version: '0.1.0',
-          ci: 'scrutinizer',
-          confirm: true
-        })
+describe('react-component-generator', () => {
+  before(() => {
+    process.chdir(__dirname)
+  })
+
+  describe('should work with confirm answers', () => {
+    beforeEach(() => {
+      mockirer(inquirer, {
+        name: 'unit',
+        description: 'Simple test',
+        version: '0.1.0',
+        ci: 'scrutinizer',
+        confirm: true
       })
-    });
-});
+    })
+  })
+})
