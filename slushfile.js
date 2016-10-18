@@ -24,7 +24,8 @@ gulp.task('default', done => {
     {
       type: 'input',
       name: 'description',
-      message: 'Please, enter a description about that.'
+      message: 'Please, enter a description about that.',
+      default: ''
     },
     {
       type: 'input',
