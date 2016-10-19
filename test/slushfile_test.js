@@ -6,6 +6,8 @@ const mockirer = require('mockirer')
 const mockGulpDest = require('mock-gulp-dest')(gulp)
 
 const mocha = require('mocha')
+const assert = require('assert')
+
 const it = mocha.it
 const describe = mocha.describe
 const before = mocha.before
@@ -18,10 +20,22 @@ describe('react-component-generator', () => {
     process.chdir(__dirname)
   })
 
-  describe('default answers', () => {
+  describe('should be not created the files', () => {
+    it('when not confirm', done => {
+      mockirer(inquirer, {
+        ci: 'scrutinizer',
+        confirm: false
+      })
 
-    describe('should be created the continuous integration files', () => {
+      gulp.start('default').once('stop', () => {
+        assert.equal(mockGulpDest.files().length, 0)
+        done()
+      })
+    })
+  })
 
+  describe('default generator', () => {
+    describe('should be created all continuous integration files', () => {
       it('scrutinizer', done => {
         mockirer(inquirer, {
           ci: 'scrutinizer',

@@ -51,9 +51,7 @@ gulp.task('default', done => {
     }
   ]).then(answers => {
     if (answers.confirm === false) {
-      console.error('Scaffolding canceled.')
-      done()
-      process.exit(1)
+      return done()
     }
 
     let files = [
