@@ -10,7 +10,7 @@
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
     "storybook": "start-storybook -p 9001 -c storybook",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -c storybook",
     "test-storybook": "storyshots -c storybook",
     "build": "npm run lint && npm test && npm run dist && npm run ghpages",
     "dist": "webpack -p --config storybook/webpack.dist.config.js",
