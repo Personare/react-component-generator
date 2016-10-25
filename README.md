@@ -19,10 +19,10 @@ To define the structure we use an internal process called **DSS** (Design Struct
 - [EditorConfig](http://editorconfig.org/) - *standardize some general settings among multiple editors*
 - [ESLint](http://eslint.org/) - *for reporting the patterns of code*
   - **Plugins**
-  - [React](https://github.com/yannickcr/eslint-plugin-react)
-  - [Snazzy](https://github.com/feross/snazzy)
-  - [Standard](https://github.com/feross/standard)
-  - [Standard Loader](https://github.com/timoxley/standard-loader)
+    - [React](https://github.com/yannickcr/eslint-plugin-react)
+    - [Snazzy](https://github.com/feross/snazzy)
+    - [Standard](https://github.com/feross/standard)
+    - [Standard Loader](https://github.com/timoxley/standard-loader)
 
 #### Tests
 - [Jest](https://facebook.github.io/jest/) - *test framework*
