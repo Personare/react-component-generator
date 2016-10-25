@@ -1,4 +1,4 @@
-# React Component Generator
+# React Component Generator [![Build Status](https://travis-ci.org/Personare/react-component-generator.svg?branch=master)](https://travis-ci.org/Personare/react-component-generator)
 
 > A slush generator for create a React component in isolation
 

@@ -1,6 +1,7 @@
+'use strict'
+
 const path = require('path')
 const gulp = require('gulp')
-const install = require('gulp-install')
 const rename = require('gulp-rename')
 const template = require('gulp-template')
 const conflict = require('gulp-conflict')
@@ -23,7 +24,8 @@ gulp.task('default', done => {
     {
       type: 'input',
       name: 'description',
-      message: 'Please, enter a description about that.'
+      message: 'Please, enter a description about that.',
+      default: ''
     },
     {
       type: 'input',
@@ -49,9 +51,7 @@ gulp.task('default', done => {
     }
   ]).then(answers => {
     if (answers.confirm === false) {
-      console.error('Scaffolding canceled.')
-      done()
-      process.exit(1)
+      return done()
     }
 
     let files = [
@@ -93,7 +93,6 @@ gulp.task('default', done => {
         defaultChoice: 'd'
       }))
       .pipe(gulp.dest('./'))
-      .pipe(install())
       .on('finish', function () {
         done()
       })
