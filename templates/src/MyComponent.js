@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 import './<%= camelName %>.css'
 
-function <%= camelName %>(props) {
+function <%= camelName %> (props) {
   return <div>Hello {props.name}</div>
 }
 
