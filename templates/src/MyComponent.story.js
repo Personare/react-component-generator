@@ -10,5 +10,5 @@ stories.add('Without properties', () => (
 ))
 
 stories.add('With name property', () => (
-  <<%= camelName %> name="Cauê Alves" />
+  <<%= camelName %> name='Cauê Alves' />
 ))
