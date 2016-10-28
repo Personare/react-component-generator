@@ -70,8 +70,18 @@ gulp.task('default', done => {
       files.push(`!${path.join(__dirname, 'templates', 'circle.yml')}`)
     }
 
+    const isToAddReactPrefix = (
+      answers.name.indexOf('react-') === -1 ||
+      answers.name.indexOf('react-') !== 0
+    )
+
     answers.name = _.humanize(answers.name)
-    answers.slugName = 'react-' + _.slugify(answers.name)
+    answers.slugName = _.slugify(answers.name)
+
+    if (isToAddReactPrefix) {
+      answers.slugName = 'react-' + answers.slugName
+    }
+
     answers.camelName = _.camelize(answers.name)
 
     git.init({ args: '--quiet' })
