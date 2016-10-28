@@ -5,7 +5,7 @@ const webpack = require('webpack')
 const validate = require('webpack-validator')
 
 module.exports = validate({
-  entry: './src/<%= camelName %>.js',
+  entry: ['./src/<%= camelName %>.js'],
   module: {
     loaders: [
       {
