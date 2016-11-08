@@ -9,6 +9,6 @@ stories.add('Without properties', () => (
   <<%= camelName %> />
 ))
 
-stories.add('With name property', () => (
+stories.addWithInfo('With name property', () => (
   <<%= camelName %> name='Cauê Alves' />
-))
+), { propTables: false, inline: true, header: false })
