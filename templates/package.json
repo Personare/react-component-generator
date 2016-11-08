@@ -12,6 +12,7 @@
     "storybook": "start-storybook -p 9001 -c storybook",
     "build-storybook": "build-storybook -c storybook",
     "test-storybook": "storyshots -c storybook",
+    "test-storybook:fix": "storyshots -c storybook -u",
     "build": "npm run lint && npm test && npm run dist && npm run ghpages",
     "dist": "webpack -p --config storybook/webpack.dist.config.js",
     "ghpages": "storybook-to-ghpages",
@@ -31,6 +32,7 @@
   "homepage": "https://github.com/personare/<%= slugName %>#readme",
   "engine": "node >= 6.0.0",
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.5.2",
     "@kadira/storybook-deployer": "^1.2.0",
     "@kadira/storyshots": "^1.1.3",
