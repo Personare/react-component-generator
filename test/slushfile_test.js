@@ -20,19 +20,6 @@ describe('react-component-generator', () => {
     process.chdir(__dirname)
   })
 
-  describe('should be not created the files', () => {
-    it('when not confirm', done => {
-      mockirer(inquirer, {
-        ci: 'scrutinizer',
-        confirm: false
-      })
-
-      gulp.start('default').once('stop', () => {
-        assert.equal(mockGulpDest.files().length, 0)
-        done()
-      })
-    })
-  })
 
   describe('default generator', () => {
     describe('should be created all continuous integration files', () => {
@@ -137,5 +124,19 @@ describe('react-component-generator', () => {
         })
       })
     })
+
+  describe('should be not created the files', () => {
+    it('when not confirm', done => {
+      mockirer(inquirer, {
+        ci: 'scrutinizer',
+        confirm: false
+      })
+
+      gulp.start('default').once('stop', () => {
+        assert.equal(mockGulpDest.files().length, 0)
+      })
+        done()
+    })
+  })
   })
 })
