@@ -1,5 +1,8 @@
 'use strict'
 
+const { join } = require('path')
+const { spawn } = require('child_process')
+const deleteDir = require('rimraf')
 const gulp = require('gulp')
 const inquirer = require('inquirer')
 const mockirer = require('mockirer')
@@ -8,10 +11,7 @@ const mockGulpDest = require('mock-gulp-dest')(gulp)
 const mocha = require('mocha')
 const assert = require('assert')
 
-const it = mocha.it
-const describe = mocha.describe
-const before = mocha.before
-const beforeEach = mocha.beforeEach
+const { it, describe, before, after, beforeEach } = mocha
 
 require('../slushfile')
 
@@ -20,14 +20,14 @@ describe('react-component-generator', () => {
     process.chdir(__dirname)
   })
 
-  describe('should be not created the files', () => {
-    it('when not confirm', done => {
-      mockirer(inquirer, {
-        ci: 'scrutinizer',
-        confirm: false
-      })
+  after((done) => {
+    deleteDir(join(process.cwd(), '.git'), () => done())
+  })
 
-      gulp.start('default').once('stop', () => {
+  describe('should be not created the files', () => {
+    it('when not confirm', (done) => {
+      mockirer(inquirer, { ci: 'scrutinizer', confirm: false })
+      gulp.start('default').once('task_stop', () => {
         assert.equal(mockGulpDest.files().length, 0)
         done()
       })
@@ -36,44 +36,29 @@ describe('react-component-generator', () => {
 
   describe('default generator', () => {
     describe('should be created all continuous integration files', () => {
-      it('scrutinizer', done => {
-        mockirer(inquirer, {
-          ci: 'scrutinizer',
-          confirm: true
-        })
+      it('scrutinizer', (done) => {
+        mockirer(inquirer, { ci: 'scrutinizer', confirm: true })
 
-        gulp.start('default').once('stop', () => {
-          mockGulpDest.assertDestContains([
-            '.scrutinizer.yml'
-          ])
+        gulp.start('default').once('task_stop', () => {
+          mockGulpDest.assertDestContains(['.scrutinizer.yml'])
           done()
         })
       })
 
-      it('travis', done => {
-        mockirer(inquirer, {
-          ci: 'travis',
-          confirm: true
-        })
+      it('travis', (done) => {
+        mockirer(inquirer, { ci: 'travis', confirm: true })
 
-        gulp.start('default').once('stop', () => {
-          mockGulpDest.assertDestContains([
-            '.travis.yml'
-          ])
+        gulp.start('default').once('task_stop', () => {
+          mockGulpDest.assertDestContains(['.travis.yml'])
           done()
         })
       })
 
-      it('circle', done => {
-        mockirer(inquirer, {
-          ci: 'circle',
-          confirm: true
-        })
+      it('circle', (done) => {
+        mockirer(inquirer, { ci: 'circle', confirm: true })
 
-        gulp.start('default').once('stop', () => {
-          mockGulpDest.assertDestContains([
-            'circle.yml'
-          ])
+        gulp.start('default').once('task_stop', () => {
+          mockGulpDest.assertDestContains(['circle.yml'])
           done()
         })
       })
@@ -91,7 +76,7 @@ describe('react-component-generator', () => {
       })
 
       it('should be created the .github/ files', done => {
-        gulp.start('default').once('stop', () => {
+        gulp.start('default').once('task_stop', () => {
           mockGulpDest.assertDestContains([
             '.github/ISSUE_TEMPLATE.md',
             '.github/PULL_REQUEST_TEMPLATE.md'
@@ -101,7 +86,7 @@ describe('react-component-generator', () => {
       })
 
       it('should be created the storybook/ files', done => {
-        gulp.start('default').once('stop', () => {
+        gulp.start('default').once('task_stop', () => {
           mockGulpDest.assertDestContains([
             'storybook/config.js',
             'storybook/webpack.config.js',
@@ -112,7 +97,7 @@ describe('react-component-generator', () => {
       })
 
       it('should be created the src/ files with the correct name', done => {
-        gulp.start('default').once('stop', () => {
+        gulp.start('default').once('task_stop', () => {
           mockGulpDest.assertDestContains([
             'src/SlushTest.js',
             'src/SlushTest.css',
@@ -124,7 +109,7 @@ describe('react-component-generator', () => {
       })
 
       it('should be created the root path files', done => {
-        gulp.start('default').once('stop', () => {
+        gulp.start('default').once('task_stop', () => {
           mockGulpDest.assertDestContains([
             '.babelrc',
             '.editorconfig',
