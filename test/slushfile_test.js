@@ -104,8 +104,7 @@ describe('react-component-generator', () => {
           mockGulpDest.assertDestContains([
             'src/SlushTest.js',
             'src/SlushTest.css',
-            'src/SlushTest.story.js',
-            'src/SlushTest.test.js'
+            'src/SlushTest.story.js'
           ])
           done()
         })
@@ -117,6 +116,7 @@ describe('react-component-generator', () => {
             '.babelrc',
             '.editorconfig',
             '.gitignore',
+            '.eslintrc.json',
             'contributing.md',
             'package.json',
             'README.md'
