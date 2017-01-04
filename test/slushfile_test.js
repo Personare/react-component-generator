@@ -1,7 +1,6 @@
 'use strict'
 
-const { join } = require('path')
-const { spawn } = require('child_process')
+const join = require('path').join
 const deleteDir = require('rimraf')
 const gulp = require('gulp')
 const inquirer = require('inquirer')
