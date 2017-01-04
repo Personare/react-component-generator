@@ -1,8 +1,12 @@
 build:
   environment:
-    node: '6.0.0'
+    node: v6.2.0
+
+  dependencies:
+    before:
+      - '[ ! -z "$NPM_TOKEN" ] && echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> .npmrc'
 
   tests:
     override:
       - npm run lint
-      - npm run test
+      - npm test
