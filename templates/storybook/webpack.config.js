@@ -13,7 +13,7 @@ module.exports = {
 
     loaders: [{
       test: /\.css?$/,
-      loaders: [ 'style', 'raw' ],
+      loaders: ['style', 'css'],
       include: path.resolve(__dirname, '..')
     }]
   }

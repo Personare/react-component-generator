@@ -4,6 +4,8 @@ const path = require('path')
 const webpack = require('webpack')
 const validate = require('webpack-validator')
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 module.exports = validate({
   entry: ['./src/<%= camelName %>.js'],
   module: {
@@ -23,7 +25,7 @@ module.exports = validate({
       },
       {
         test: /\.css?$/,
-        loaders: [ 'style', 'raw' ],
+        loader: ExtractTextPlugin.extract('style', 'css'),
         include: path.resolve(__dirname, '..')
       }
     ]
@@ -31,20 +33,28 @@ module.exports = validate({
 
   externals: {
     'react': 'react',
-    'react-dom': 'ReactDOM'
+    'react-dom': 'react-dom'
   },
 
   output: {
-    filename: 'dist/<%= slugName %>.js',
+    path: 'dist',
+    filename: '[name].js',
     libraryTarget: 'umd'
   },
 
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
+    new ExtractTextPlugin('[name].css'),
+
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': '"production"'
       }
     }),
+
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false }
+    }),
+
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin()
   ]
