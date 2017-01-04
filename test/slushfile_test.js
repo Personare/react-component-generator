@@ -26,7 +26,7 @@ describe('react-component-generator', () => {
 
   describe('should be not created the files', () => {
     it('when not confirm', (done) => {
-      mockirer(inquirer, { ci: 'scrutinizer', confirm: false })
+      mockirer(inquirer, { ci: 'travis', confirm: false })
       gulp.start('default').once('task_stop', () => {
         assert.equal(mockGulpDest.files().length, 0)
         done()
@@ -37,7 +37,11 @@ describe('react-component-generator', () => {
   describe('default generator', () => {
     describe('should be created all continuous integration files', () => {
       it('scrutinizer', (done) => {
-        mockirer(inquirer, { ci: 'scrutinizer', confirm: true })
+        mockirer(inquirer, {
+          ci: 'scrutinizer',
+          confirm: true,
+          NPM_TOKEN: 'mock' // prevent ReferenceError: NPM_TOKEN is not defined from `gulp-template`
+        })
 
         gulp.start('default').once('task_stop', () => {
           mockGulpDest.assertDestContains(['.scrutinizer.yml'])
@@ -70,7 +74,7 @@ describe('react-component-generator', () => {
           name: 'slush-test',
           description: 'Unit tests',
           version: '1.0.0',
-          ci: 'scrutinizer',
+          ci: 'travis',
           confirm: true
         })
       })
