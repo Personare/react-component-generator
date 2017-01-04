@@ -7,7 +7,7 @@ const validate = require('webpack-validator')
 module.exports = validate({
   entry: ['./src/<%= camelName %>.js'],
   module: {
-    preloaders: [
+    preLoaders: [
       {
         test: /\.js$/,
         loader: 'eslint',
