@@ -1,7 +1,6 @@
 'use strict'
 
-const { join } = require('path')
-const { spawn } = require('child_process')
+const join = require('path').join
 const deleteDir = require('rimraf')
 const gulp = require('gulp')
 const inquirer = require('inquirer')
@@ -105,8 +104,7 @@ describe('react-component-generator', () => {
           mockGulpDest.assertDestContains([
             'src/SlushTest.js',
             'src/SlushTest.css',
-            'src/SlushTest.story.js',
-            'src/SlushTest.test.js'
+            'src/SlushTest.story.js'
           ])
           done()
         })
@@ -118,6 +116,7 @@ describe('react-component-generator', () => {
             '.babelrc',
             '.editorconfig',
             '.gitignore',
+            '.eslintrc.json',
             'contributing.md',
             'package.json',
             'README.md'

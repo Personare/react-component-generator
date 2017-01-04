@@ -84,6 +84,7 @@ gulp.task('default', (done) => {
       }
 
       answers.camelName = _.camelize(answers.name)
+      answers.NPM_TOKEN = process.env.NPM_TOKEN || 'PLEASE_ADD_A_TOKEN'
 
       git.init({ args: '--quiet' })
 

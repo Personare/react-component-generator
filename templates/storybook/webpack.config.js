@@ -8,12 +8,12 @@ module.exports = {
       test: /\.js$/,
       exclude: /node_modules/,
       include: path.resolve(__dirname, '..'),
-      loader: 'standard'
+      loader: 'eslint'
     }],
 
     loaders: [{
       test: /\.css?$/,
-      loaders: [ 'style', 'raw' ],
+      loaders: ['style', 'css'],
       include: path.resolve(__dirname, '..')
     }]
   }

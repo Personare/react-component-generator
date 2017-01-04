@@ -8,7 +8,3 @@ const stories = storiesOf('<%= camelName %>', module)
 stories.add('Without properties', () => (
   <<%= camelName %> />
 ))
-
-stories.add('With name property', () => (
-  <<%= camelName %> name='Cauê Alves' />
-))
