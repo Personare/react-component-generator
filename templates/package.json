@@ -32,6 +32,7 @@
   "homepage": "https://github.com/personare/<%= slugName %>#readme",
   "engine": "node >= 6.0.0",
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.5.2",
     "@kadira/storybook-deployer": "^1.2.0",
     "@kadira/storyshots": "^1.1.3",
