@@ -50,6 +50,6 @@
     "mock-gulp-dest": "^0.1.1",
     "mockirer": "^2.0.0",
     "snazzy": "^5.0.0",
-    "standard": "^8.2.0"
+    "standard": "^8.6.0"
   }
 }
