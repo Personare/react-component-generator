@@ -10,6 +10,6 @@
     "jsx-a11y/img-redundant-alt": 2,
     "jsx-a11y/aria-unsupported-elements": 2,
     "jsx-a11y/aria-proptypes": 2,
-    "jsx-a11y/href-no-hash": 2
+    "jsx-a11y/href-no-hash": 1
   }
 }
