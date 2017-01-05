@@ -117,6 +117,7 @@ describe('react-component-generator', () => {
             '.editorconfig',
             '.gitignore',
             '.eslintrc.json',
+            '.eslintignore',
             'contributing.md',
             'package.json',
             'README.md'
