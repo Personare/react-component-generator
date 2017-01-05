@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 
-import <%= camelName %> from './<%= camelName %>'
+import <%= camelName %> from './index'
 
 const stories = storiesOf('<%= camelName %>', module)
 
