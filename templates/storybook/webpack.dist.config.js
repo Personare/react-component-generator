@@ -7,7 +7,14 @@ const validate = require('webpack-validator')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = validate({
-  entry: ['./src/<%= camelName %>.js'],
+  entry: './src/index.js',
+
+  output: {
+    path: 'dist',
+    filename: '<%= camelName %>.js',
+    libraryTarget: 'umd'
+  },
+
   module: {
     preLoaders: [
       {
@@ -36,14 +43,8 @@ module.exports = validate({
     'react-dom': 'react-dom'
   },
 
-  output: {
-    path: 'dist',
-    filename: '[name].js',
-    libraryTarget: 'umd'
-  },
-
   plugins: [
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin('<%= camelName %>.css'),
 
     new webpack.DefinePlugin({
       'process.env': {
