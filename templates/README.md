@@ -8,26 +8,41 @@
 
 Ensure you've [Node.js](https://nodejs.org) version >= 6 installed, then run the following command:
 
+**Yarn:**
+
+```
+yarn add @personare/<%= slugName %>
+```
+
+**NPM:**
+
 ```
 $ npm install @personare/<%= slugName %> --save
 ```
 
 ## Usage
+
 ```js
 import <%= camelName %> from '@personare/<%= slugName %>';
 
 <<%= camelName %> />
 ```
 
-## Development
+## Development scripts
 
-To start developing in the project run:
-
-```bash
-npm run serve
-```
-
-Then ready at `http://localhost:9001`.
+- Up and running storybook: `yarn serve` or `npm run serve`
+  - Then ready at `http://localhost:9001`.
+- Runnning tests: `yarn test` or `npm test`
+- Running unit tests: `yarn test:unit` or `npm run test:unit`
+- Running unit tests in _watch mode_: `yarn test:watch` or `npm run test:watch`
+- Lint: `yarn lint` or `npm run lint`
+- Fix simple lint problems: `yarn lint:fix` or `npm run lint:fix`
+- Storybook (the same as `yarn serve`): `yarn storybook` or `npm run storybook`
+- Generate Storybook static files: `yarn build-storybook` or `npm run build-storybook`
+- Test with snapshots: `yarn test-storybook` or `npm run test-storybook`
+- Generate minified files: `yarn dist` or `npm run dist`
+- Deploy to GitHub Pages: `yarn ghpages` or `npm run ghpages`
+- Build project (run lint, tests, generate minified files, and deploy to ghpages): `yarn build` or `npm run build`
 
 ## Tests
 
