@@ -7,7 +7,7 @@ const validate = require('webpack-validator')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = validate({
-  entry: path.join('.', 'src', 'index.js'),
+  entry: path.resolve('.', 'src', 'index.js'),
 
   output: {
     path: 'dist',
