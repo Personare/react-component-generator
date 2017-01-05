@@ -102,7 +102,7 @@ describe('react-component-generator', () => {
       it('should be created the src/ files with the correct name', done => {
         gulp.start('default').once('task_stop', () => {
           mockGulpDest.assertDestContains([
-            'src/SlushTest.js',
+            'src/index.js',
             'src/SlushTest.css',
             'src/SlushTest.story.js'
           ])
