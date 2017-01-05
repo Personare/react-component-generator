@@ -15,9 +15,9 @@
     "build": "npm run lint && npm test && npm run dist && npm run ghpages",
     "dist": "NODE_ENV=production webpack -p --config storybook/webpack.dist.config.js",
     "ghpages": "storybook-to-ghpages",
-    "prepush": "npm run lint && npm test",
     "serve": "npm run storybook",
     "pub": "npm publish",
+    "prepush": "npm run lint && npm test",
     "preversion": "npm test",
     "postversion": "npm run pub"
   },
