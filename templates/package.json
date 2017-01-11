@@ -12,6 +12,7 @@
     "storybook": "start-storybook -p 9001 -c storybook",
     "build-storybook": "build-storybook -c storybook -o .out",
     "test-storybook": "storyshots -c storybook",
+    "test-storybook:fix": "npm run test-storybook -- -u",
     "build": "npm run lint && npm test && npm run dist && npm run ghpages",
     "dist": "NODE_ENV=production webpack -p --config storybook/webpack.dist.config.js",
     "ghpages": "storybook-to-ghpages",
