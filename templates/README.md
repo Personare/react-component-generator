@@ -23,10 +23,87 @@ $ npm install @personare/<%= slugName %> --save
 ## Usage
 
 ```js
-import <%= camelName %> from '@personare/<%= slugName %>';
+import <%= camelName %> from '@personare/<%= slugName %>'
 
 <<%= camelName %> />
 ```
+
+## How to add CSS files
+
+Some components have a CSS file included. To use this files, just import the CSS file at the same place you've imported the JS file:
+
+```js
+import '@personare/<%= camelName %>/dist/<%= camelName %>.css'
+```
+
+If you already have the CSS loaders added on your project, just add this piece of code on `include` entry:
+
+```js
+include: path.join(__dirname, 'node_modules', '@personare')
+```
+
+It should looks like this:
+
+```js
+{
+  test: /\.css$/,
+  include: [
+    path.join(__dirname, 'src'),
+    path.join(__dirname, 'node_modules', '@personare')
+  ],
+  loaders: ['style', 'css']
+}
+```
+
+But, if you don't have CSS loaders, follow this steps:
+
+- Install `style-loader`, `css-loader` and `extract-text-webpack-plugin`:
+
+```sh
+yarn add --dev style-loader css-loader extract-text-webpack-plugin
+# or
+npm install --save-dev style-loader css-loader extract-text-webpack-plugin
+```
+
+If you are using `webpack 2`, install `extract-text-webpack-plugin@^2.0.0-beta`:
+
+```sh
+yarn add --dev extract-text-webpack-plugin@^2.0.0-beta
+# or
+npm install --save-dev extract-text-webpack-plugin@^2.0.0-beta
+```
+
+Add loaders on your `module.loaders` entry (or `module.rules`, if you are using webpack 2):
+
+```js
+module: {
+  loaders: [{ // or `rules`, if you are using webpack 2
+    test: /\.css$/,
+    include: path.join(__dirname, 'node_modules', '@personare'),
+    loaders: ['style-loader', 'css-loader'] // or `use`, if you are using webpack 2
+  }]
+}
+```
+
+For production builds, to extract CSS to a separated file, just use `extract-text-webpack-plugin`:
+
+```js
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+module: {
+  loaders: [{ // or `rules`, if you are using webpack 2
+    test: /\.css$/,
+    include: path.join(__dirname, 'node_modules', '@personare'),
+    loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+  }]
+},
+
+plugins: [
+  new ExtractTextPlugin('style.css')
+]
+```
+
+And a `style.css` file will be extracted to your `dist` directory, configured on `output.path`.
 
 ## Development scripts
 
