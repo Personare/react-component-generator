@@ -2,7 +2,7 @@
   "name": "@personare/<%= slugName %>",
   "version": "<%= version %>",
   "description": "<%= description %>",
-  "main": "dist/<%= slugName %>.js",
+  "main": "dist/<%= camelName %>.js",
   "scripts": {
     "test": "npm run test-storybook",
     "test:unit": "jest --coverage --no-cache",
