@@ -36,12 +36,7 @@ describe('react-component-generator', () => {
   describe('default generator', () => {
     describe('should be created all continuous integration files', () => {
       it('scrutinizer', (done) => {
-        mockirer(inquirer, {
-          ci: 'scrutinizer',
-          confirm: true,
-          NPM_TOKEN: 'mock' // prevent ReferenceError: NPM_TOKEN is not defined from `gulp-template`
-        })
-
+        mockirer(inquirer, { ci: 'scrutinizer', confirm: true })
         gulp.start('default').once('task_stop', () => {
           mockGulpDest.assertDestContains(['.scrutinizer.yml'])
           done()

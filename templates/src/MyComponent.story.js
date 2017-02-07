@@ -7,4 +7,4 @@ const stories = storiesOf('<%= camelName %>', module)
 
 stories.addWithInfo('Without properties', () => (
   <<%= camelName %> />
-), { propTables: false, inline: true, header: false })
+), { propTables: [<%= camelName %>], inline: true, header: false })

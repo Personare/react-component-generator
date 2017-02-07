@@ -13,7 +13,7 @@ function getSuggestName () {
   return path.basename(process.cwd())
 }
 
-gulp.task('default', (done) => {
+gulp.task('default', () => {
   return new Promise((resolve, reject) => {
     inquirer.prompt([
       {
@@ -90,6 +90,7 @@ gulp.task('default', (done) => {
 
       return gulp.src(files)
         .pipe(template(answers))
+        .on('error', (error) => console.log('template(answers) error:', error))
         .pipe(rename(file => {
           if (file.basename[0] === '_') {
             file.basename = '.' + file.basename.slice(1)
@@ -101,9 +102,12 @@ gulp.task('default', (done) => {
             file.basename = file.basename.replace('MyComponent', answers.camelName)
           }
         }))
+        .on('error', (error) => console.log('rename(file) error:', error))
         .pipe(conflict('./', { defaultChoice: 'd' }))
+        .on('error', (error) => console.log('conflict error:', error))
         .pipe(gulp.dest('./'))
-        .on('finish', () => done())
+        .on('error', (error) => console.log('gulp.dest error:', error))
+        .on('finish', () => resolve())
         .resume()
     })
   })

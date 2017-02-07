@@ -1,17 +1,27 @@
 'use strict'
 
-const path = require('path')
+const { join } = require('path')
 const webpack = require('webpack')
 const validate = require('webpack-validator')
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+const personareModules = (...newPath) => {
+  return join(__dirname, '..', 'node_modules', '@personare', ...newPath)
+}
+
+const sameKeyAndValue = (object, key) => {
+  object[key] = key
+  return object
+}
+
 module.exports = validate({
-  entry: path.resolve('.', 'src', 'index.js'),
+  entry: join(__dirname, '..', 'src', 'index.js'),
 
   output: {
     path: 'dist',
     filename: '<%= camelName %>.js',
+    library: '<%= camelName %>',
     libraryTarget: 'umd'
   },
 
@@ -19,7 +29,7 @@ module.exports = validate({
     preLoaders: [
       {
         test: /\.js$/,
-        loader: 'eslint',
+        loader: 'eslint-loader',
         exclude: /node_modules/
       }
     ],
@@ -27,21 +37,27 @@ module.exports = validate({
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        exclude: /node_modules/
+        loader: 'babel-loader',
+        include: [
+          join(__dirname, '..', 'src'),
+          personareModules()
+        ]
       },
       {
-        test: /\.css?$/,
-        loader: ExtractTextPlugin.extract('style', 'css'),
-        include: path.resolve(__dirname, '..')
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+        include: [
+          join(__dirname, '..', 'src'),
+          personareModules()
+        ]
       }
     ]
   },
 
-  externals: {
-    'react': 'react',
-    'react-dom': 'react-dom'
-  },
+  externals: [
+    'react',
+    'react-dom'
+  ].reduce(sameKeyAndValue, {}),
 
   plugins: [
     new ExtractTextPlugin('<%= camelName %>.css'),
