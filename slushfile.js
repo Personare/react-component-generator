@@ -84,12 +84,11 @@ gulp.task('default', () => {
       }
 
       answers.camelName = _.camelize(answers.name)
-      answers.NPM_TOKEN = process.env.NPM_TOKEN || 'PLEASE_ADD_A_TOKEN'
 
       git.init({ args: '--quiet' })
 
       return gulp.src(files)
-        .pipe(template(answers))
+        .pipe(template(answers, { interpolate: /<%=([\s\S]+?)%>/g }))
         .on('error', (error) => console.log('template(answers) error:', error))
         .pipe(rename(file => {
           if (file.basename[0] === '_') {

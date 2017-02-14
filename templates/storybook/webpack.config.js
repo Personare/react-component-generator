@@ -38,7 +38,7 @@ module.exports = (config, env) => {
     alias: readdirSync(personareModules())
       .filter((dir) => dir !== 'react-storybook-decorator-github-corner')
       .reduce((acc, dir) => {
-        acc['@personare/' + dir] = personareModules(dir, 'src')
+        acc[`@personare/${dir}`] = personareModules(dir, 'src')
         return acc
       }, {})
   }
