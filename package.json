@@ -1,6 +1,6 @@
 {
   "name": "@personare/slush-react-component-generator",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "description": "A slush generator for create a React component in isolation.",
   "main": "slushfile.js",
   "scripts": {
