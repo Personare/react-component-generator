@@ -91,18 +91,6 @@ slush react-component-generator
 
 This generator was made with love by [contributors](https://github.com/Personare/react-component-generator/graphs/contributors).
 
-### Creator
-
-[![Profile image of Cauê Alves](https://s.gravatar.com/avatar/00ef47231ad53e5a68e4524bfdb0ecf2?s=70)](https://twitter.com/ceasbz) |
---- | --- | --- | --- | --- | --- | ---
-[Cauê Alves](https://twitter.com/ceasbz) |
-
-### Participated in sprint
-
-[![Profile image of Pedro Gustavo](https://s.gravatar.com/avatar/dae75a24d5c3a99827277cdc42390722?s=70)](https://github.com/pedrogustavo) | [![Profile image of Abilio Bittencurt](https://s.gravatar.com/avatar/9406e384856a497e7239669a2d90046f?s=70)](https://github.com/antigui22)
---- | --- | --- | --- | --- | --- | ---
-[Pedro Gustavo](https://github.com/pedrogustavo) | [Abilio Bittencourt](https://github.com/antigui22)
-
 ## License
 
 [MIT © Personare](./LICENSE)
